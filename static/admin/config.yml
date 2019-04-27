@@ -1,0 +1,43 @@
+backend:
+  name: github
+  repo: cmscmscms2019/netlify-analytics
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: products
+    label: Product
+    folder: content/products
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: title, label: Page Title }
+      - widget: object
+        name: header
+        fields:
+          - { name: markdown, label: Header markdown, widget: markdown }
+          - { name: image, label: Header image, widget: image, required: false }
+      - widget: list
+        name: sections
+        hint: page sections
+        types:
+          - name: content
+            fields:
+              - { name: header, label: Header, required: false }
+              - widget: list
+                name: bullets
+                label: bullets
+                fields:
+                  - { name: image, label: Bullet image, widget: image, required: false }
+                  - { name: imagePosition, label: Image position, required: false }
+                  - { name: markdown, label: Bullet markdown, required: false, widget: markdown }
+          - name: callToAction
+            fields:
+              - { name: markdown, label: Markdown, required: false, widget: markdown }
+              - { name: linkText, label: Link Text }
+              - { name: linkUrl, label: Link Url }
+              - { name: image, label: CTA Image, widget: image, required: false }
+
+
+              

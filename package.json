@@ -1,0 +1,31 @@
+{
+  "name": "netlify-products",
+  "private": true,
+  "description": "A platform for making Netlify product pages",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
+    "gatsby": "^2.3.27",
+    "gatsby-plugin-netlify-cms": "^3.0.18",
+    "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-source-filesystem": "^2.0.31",
+    "gatsby-transformer-remark": "^2.3.10",
+    "netlify-cms": "^2.9.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-markdown": "^4.0.8",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.17.0"
+  }
+}
